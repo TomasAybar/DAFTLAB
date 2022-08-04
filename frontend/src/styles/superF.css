@@ -1,0 +1,457 @@
+@import url('https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap');
+.containerSuperF{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.question-card {
+    margin: 0 auto;
+    width: 100%; /* Can be in percentage also. */
+    min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+    /* background-color: gray; */
+    padding: 16px;
+    /* border-radius: 16px; */
+    color: white;
+    /* border: solid 2px red; */
+    /* box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
+      rgba(0, 0, 0, 0.3) 0px 18px 36px -18px; */
+  }
+  
+  .ulSuperF {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+   justify-content: center;
+  }
+  
+  .ulSuperF li {
+ color: aliceblue;
+    /* background-color:#0000007a; */
+    /* padding: 16px; */
+    border: 3px solid white;
+    border-radius: 60px;
+    font-size: 20px;
+    cursor: pointer;
+    margin: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .question-text {
+    /* color: darkblue; */
+    /* font-size: 26px;
+    font-family:  sans-serif; */
+    /* font-size: 4rem; */
+    color: #f0f8ff;
+    font-weight: 700;
+    left: 0;
+    margin: 0;
+    padding: 0 20px 20px;
+    text-align: center;
+    text-shadow: 0 1px 0 #fff, 0 8px 2px rgb(0 0 0 / 30%), 0 -2px 9px rgb(0 0 0 / 20%), 0 0 3px rgb(0 0 0 / 10%);
+    text-transform: uppercase;
+    top: 120px;
+  }
+  
+  /* Final Results  */
+  
+  .final-results {
+    /* Center the div  */
+    margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+    /* Dimensions  */
+    width: 100%; /* Can be in percentage also. */
+    height: 100%;
+    /* margin-top: 64px; */
+  background-image: url("https://images.unsplash.com/photo-1518002171953-a080ee817e1f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+  background-size: cover;
+
+    background-position: center;
+    object-fit: cover;
+  /* Visual  */
+    /* background-color: gray; */
+    padding: 16px;
+    /* border-radius: 16px; */
+    color: white;
+    /* box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
+      rgba(0, 0, 0, 0.3) 0px 18px 36px -18px; */
+  }
+  .containerCarsFinal{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  /* width: 100%;
+  height: 100%; */
+  }
+  .containerOp{
+    display: flex;
+  }
+  .btn{
+    transition: 1s ease-in-out;
+    filter: none!important;
+    background-size: cover;
+    background-position: center;
+    object-fit: cover;
+    color: rgb(0, 0, 0);
+    font-weight: 700;
+    height: 10rem;
+    width: 15rem;
+    transform: rotate(-23deg);
+    left: -27px;
+    transition: 1s ease-in-out;
+    cursor: pointer;
+    border: none!important;
+    align-items: center!important;
+    text-transform: uppercase;
+    
+  }
+ .btnSport p, .btnFancy p, .btnUrban p, .btn1 p{
+  background-color: #56565666;
+  font-size: 20px!important;
+  /* padding: 4px; */
+  border-radius: 10px;
+  text-shadow: 0 1px 0 #fff, 0 8px 2px rgb(0 0 0 / 30%), 0 -2px 9px rgb(0 0 0 / 20%), 0 0 3px rgb(0 0 0 / 10%);
+  }
+
+  .btnUrban{
+    background-image: url("http://imgfz.com/i/WoLdA5g.png");
+  }
+  .btnSport{
+    background-image: url("http://imgfz.com/i/3WPvd2X.png");
+    
+  }
+.btnFancy{
+    background-image: url("http://imgfz.com/i/VUzcQ9u.png");
+    
+  }
+  .btnUrban:hover, .btnSport:hover, .btnFancy:hover {
+    transform: scale(1.2) rotate(0);
+    /* transform: scale(1.2) translateY(-40px); */
+    left: 0;
+    -webkit-filter: drop-shadow(0 10px 10px rgba(0,0,0,.8));
+    filter: drop-shadow(0 10px 10px rgba(0,0,0,.8))
+  }
+  .color{
+    height: 4rem!important;
+    width: 4rem!important;
+    font-size: 10px!important;
+    text-align: center!important;
+    border-radius: 50%!important;
+    transition: 1s ease-in-out;
+    border: none!important;
+  }
+.white{
+  background-color:white ;
+color:#090909!important;
+}
+.black-sf{
+  background-color:rgb(0, 0, 0) ;
+
+}
+.grey{
+  background-color:rgb(153, 153, 153) ;
+
+}
+.brown{
+  background-color:rgb(67, 52, 0) ;
+}
+.gren{
+  background-color:rgb(0, 98, 2) ;
+
+}
+.orange{
+  background-color:rgb(255, 134, 47) ;
+
+}
+.cream{
+  background-color:rgb(240, 197, 117) ;
+
+}
+.blue{
+  background-color:rgb(3, 42, 142) ;
+
+}
+.red{
+  background-color:rgb(249, 64, 64) ;
+
+}
+.purple{
+  background-color:rgb(242, 69, 242) ;
+
+}
+.multi{
+  /* background-color: #fff; */
+  /* background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1TQ_7-5-yOTfz0vfKuBrWGOMV3-oAmeWlZw&usqp=CAU"); */
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7gY-XrASx7zLo0I26IUcASdQdlbSTDGREtA&usqp=CAU");
+  background-position: center;
+  background-size: cover;
+}
+.multi:hover, .purple:hover, .white:hover, .red:hover, .blue:hover, .cream:hover, .orange:hover, .gren:hover, .brown:hover , .grey:hover,  .black-sf:hover{
+  transform: scale(1.2) translateY(-20px);
+  left: 0;
+  -webkit-filter: drop-shadow(0 10px 10px rgba(0,0,0,.8));
+  filter: drop-shadow(0 10px 10px rgba(0,0,0,.8))
+}
+/* .multi:hover, .purple:hover, .white:hover, .red:hover, .blue:hover, .cream:hover, .orange:hover, .gren:hover, .brown:hover , .grey:hover{
+  transform: scale(1.2) translateY(-20px);
+  left: 0;
+  -webkit-filter: drop-shadow(0 10px 10px rgba(0,0,0,.8));
+  filter: drop-shadow(0 10px 10px rgba(0,0,0,.8))
+} */
+
+
+.btn1{
+  filter: none!important;
+  background-size: cover;
+  background-position: center;
+  object-fit: cover;
+  color: rgb(244, 244, 244);
+  height: 8rem;
+  width: 12rem;
+  transform: rotate(-23deg);
+  left: -27px;
+  transition: 1s ease-in-out;
+  cursor: pointer;
+  border: none!important;
+  text-transform: uppercase ;
+  transition: 1s ease-in-out;
+  align-items: center!important;
+}
+  /*btn marcas*/
+
+.Nike{
+  background-image: url("http://imgfz.com/i/4pwWRUj.png");
+}
+.Adidas{
+  background-image: url("http://imgfz.com/i/BYvCQ3F.png");
+}
+.Jordan{
+  background-image: url("https://d2r9epyceweg5n.cloudfront.net/stores/001/932/403/products/191-b04eb5622cfbbf905116490105728409-640-0.png");
+}
+
+.New{
+  background-image: url("http://imgfz.com/i/YSpr6Kq.png");
+}
+
+.Asics{
+  background-image: url("http://imgfz.com/i/mxILA59.png");
+}
+
+.Balenciaga{
+  background-image: url("https://cdn.discordapp.com/attachments/998642280665727078/1001306394496094208/Balenciaga-adidas-Triple-S-outpump-removebg-preview.png");
+  transform: scale(1.1) rotate(-23deg);
+ 
+}
+.Balenciaga p{
+  font-size: 15px!important;
+}
+
+.Dior{
+  background-image: url("https://cdn.discordapp.com/attachments/998642280665727078/1001310493287391423/unknown-removebg-preview.png");
+  transform: scale(0.9) rotate(-23deg);
+}
+
+.Louis{
+  background-image: url("https://cdn.discordapp.com/attachments/998642280665727078/1001312187152875590/images-ext-2_discordapp_net-Louis-Vuitton-LV-Trainer-Sneaker-Low-White-Green-Product-removebg-preview.png");
+  transform: scale(0.8) rotate(-23deg);
+} 
+.Balenciaga:hover{
+  transform: scale(1.2) rotate(0)!important;
+}
+.Dior:hover{
+  transform: scale(1.2) rotate(0)!important;
+}
+.Louis:hover{
+  transform: scale(1.2) rotate(0)!important;
+}
+.Nike:hover, .Adidas:hover, .Jordan:hover, .New:hover, .Asics:hover, .Balenciaga:hover, .Dior:hover, .Louis:hover{
+  transform: scale(1.2) rotate(0);
+  left: 0;
+  -webkit-filter: drop-shadow(0 10px 10px rgba(0,0,0,.8));
+  filter: drop-shadow(0 10px 10px rgba(0,0,0,.8))
+}
+.btnGo, .btnYes {
+  --width: 92px;
+  height: 92px;
+  --timing: 2s;
+  border: 0;
+  width: var(--width);
+  padding-block: 1em;
+  color: #fff;
+  font-weight: bold;
+  font-size: 25px!important;
+  background: rgb(0, 0, 0);
+  transition: all 0.2s;
+  border-radius: 50%!important;
+  text-align: center;
+}
+
+.btnGo p, .btnYes p{
+  font-size: 25px!important;
+  font-weight: bold;
+  margin: 0!important;
+}
+
+.btnGo:hover, .btnYes:hover {
+  background-image: linear-gradient(to right, rgb(250, 82, 82), rgb(250, 82, 82) 16.65%, rgb(190, 75, 219) 16.65%, rgb(190, 75, 219) 33.3%, rgb(76, 110, 245) 33.3%, rgb(76, 110, 245) 49.95%, rgb(64, 192, 87) 49.95%, rgb(64, 192, 87) 66.6%, rgb(250, 176, 5) 66.6%, rgb(250, 176, 5) 83.25%, rgb(253, 126, 20) 83.25%, rgb(253, 126, 20) 100%, rgb(250, 82, 82) 100%);
+  animation: var(--timing) linear dance6123 infinite;
+  transform: scale(1.1) translateY(-1px);
+}
+@keyframes dance6123 {
+  to {
+    background-position: var(--width);
+  }
+}
+
+  /* .btnReset {
+    background-color: #090909;
+    border: none;
+    color: white;
+    padding: 16px 75px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 1s ease-in-out;
+    border-radius: 10px;
+    margin-top: 1rem;
+  } */
+  .btnReset {
+    position: relative;
+    display: inline-block;
+    margin: 15px;
+    padding: 15px 30px;
+    text-align: center;
+    font-size: 18px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: #ffffff;
+    background: transparent;
+    cursor: pointer;
+    transition: ease-out 0.5s;
+    border: 3px solid #ffffff;
+    border-radius: 10px;
+    box-shadow: inset 0 0 0 0 #000000;
+  }
+  
+  .btnReset:hover {
+    color: white;
+    box-shadow: inset 0 -100px 0 0 #000000;
+  }
+  .resultF{
+    margin-top: 3rem;
+  }
+  
+  .btnReset:active {
+    transform: scale(0.9);
+  }
+  /*Clases por answer**/
+.Your{
+  background-image: url("https://images.pexels.com/photos/8473581/pexels-photo-8473581.jpeg");
+  background-size: cover;
+  object-fit: contain;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+background-color: bisque;
+}
+.WITH, .DO, .HOW, .View{
+  background-size: cover;
+  object-fit: contain;
+  background-position: center;
+  background-color: rgb(45, 140, 166);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  transition: 1s ease-in-out;
+}
+.WITH{
+  background-image: url("https://nigramercato.com/modules/sphomeslider/images/d6875b256ffc349e0116339d46de7771c6a0265e_ADIDAS%20FORUM%20LOW%20RED%20PC.jpg")!important; 
+}
+.DO{
+  background-color: rgb(186, 33, 64);
+  background-image: url("https://cdn.discordapp.com/attachments/964573436590587985/1001605379563724860/image.png");
+
+}
+.HOW{
+  background-color: rgb(120, 186, 33);
+  background-image: url("https://images.unsplash.com/photo-1551726195-0c4e3e49f2a0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+  justify-content: space-evenly!important;
+  /* color: #090909!important; */
+  text-shadow: 0 1px 0 #fff, 0 -1px 2px rgb(0 0 0 / 30%), 0 -2px 2px rgb(0 0 0 / 20%), 0 0 3px rgb(0 0 0 / 10%);
+
+}
+.What{
+  background-color: rgb(186, 33, 64);
+  background-image: url("https://images.unsplash.com/photo-1533681018184-68bd1d883b97?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1631&q=80");
+  background-size: cover!important;
+  object-fit: contain!important;
+  background-position: center!important;
+  height: 100%!important;
+  width: 100%!important;
+  display: flex!important;
+  align-items: center!important;
+  justify-content: space-evenly!important;
+  border-radius: 0!important;
+  flex-direction: column;
+}
+.View{
+  background-color: rgb(91, 203, 194);
+  background-image: url("https://images.unsplash.com/photo-1542219550-37153d387c27?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+}
+/**botonesOpPlata*/
+
+.btn3 {
+  display: inline-block;
+  padding: 0 1rem ;
+  border-radius: 20px!important;
+  font-size: 16px;
+  font-weight: 700;
+  color: white;
+  border: 3px solid rgb(255 88 2);
+  cursor: pointer;
+  position: relative;
+  background-color: transparent;
+  text-decoration: none;
+  overflow: hidden;
+  z-index: 1;
+  font-family: inherit;
+ }
+ .btn3 p{
+  font-size: 20px!important;
+ }
+ .btn3::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(255 88 2);
+  transform: translateX(-100%);
+  transition: all .3s;
+  z-index: -1;
+ }
+ 
+ .btn3:hover::before {
+  transform: translateX(0);
+ }
