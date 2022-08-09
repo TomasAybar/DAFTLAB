@@ -14,13 +14,24 @@
 <p align="left">Some functions of the project: </p>
 <p align="left">
 -Registration with user validation, and with Google. <br>
--Add comments with rating. <br>
 -Shopping cart working with controllers in the backend and local storage. <br>
 -Payment methods with Paypal and GooglePay. <br>
 -Database working with Mongodb. <br>
 -Text filters and "IDEAL" shoe finder. <br>
 
 </p>
+
+<hr>
+<p align="left">Algunas funciones del proyecto: </p>
+<p align="left">
+-Registro con validación de usuarios, y con Google. <br>
+-Carro de la compra trabajando con controladores en el backend y almacenamiento local. <br>
+-Métodos de pago con Paypal y GooglePay. <br>
+-Base de datos trabajando con Mongodb. <br>
+-Filtros de texto y buscador de zapatos "IDEAL".  <br>
+
+</p>
+
 <br>
 
 
