@@ -2,8 +2,6 @@ const Router = require('express').Router();
 const passport = require('../config/passport')
 
 const userValidator = require('../config/validator') //Requiero validador
-
-
 const shoesControllers = require('../controllers/shoesControllers');
 
 const { getShoes, getOneShoe, addShoe, modifyShoe, removeShoe, getShoesByType, getShoesByBrand } = shoesControllers;
@@ -13,18 +11,18 @@ const { getShoes, getOneShoe, addShoe, modifyShoe, removeShoe, getShoesByType, g
 
 Router.route('/shoes')
     .get(getShoes)
-    .post(addShoe)
+    .post(passport.authenticate('jwt', { session: false }), addShoe)
 
 Router.route('/shoes/:id')
     .get(getOneShoe)
-    .put(modifyShoe)
-    .delete(removeShoe)
+    .put(passport.authenticate('jwt', { session: false }), modifyShoe)
+    .delete(passport.authenticate('jwt', { session: false }), removeShoe)
 
 Router.route('/shoesByType/:id')
-   .get(getShoesByType)
+    .get(getShoesByType)
 
 Router.route('/shoesByBrand/:id')
-   .get(getShoesByBrand)
+    .get(getShoesByBrand)
 
 
 // USERS
@@ -48,7 +46,7 @@ Router.route('/verify/:string')
     .get(verifyEmail)
 
 Router.route('/logintoken')
-    .get(passport.authenticate('jwt', { session: false }), verifyToken) 
+    .get(passport.authenticate('jwt', { session: false }), verifyToken)
 
 Router.route('/email')
     .post(paypalEmail)
@@ -61,11 +59,11 @@ const { getTypeShoes, getOnetypeShoes, addTypeShoe, modifyTypeShoe, removeTypeSh
 
 Router.route('/shoesType')
     .get(getTypeShoes)
-    .post(addTypeShoe)
+    .post(passport.authenticate('jwt', { session: false }), addTypeShoe)
 
 Router.route('/shoesType/:id')
-    .delete(removeTypeShoe)
-    .put(modifyTypeShoe)
+    .delete(passport.authenticate('jwt', { session: false }), removeTypeShoe)
+    .put(passport.authenticate('jwt', { session: false }), modifyTypeShoe)
     .get(getOnetypeShoes)
 
 //BRAND SHOES
@@ -76,7 +74,7 @@ const { getBrandShoes, addBrandShoe } = brandShoesControllers;
 
 Router.route('/brandShoes')
     .get(getBrandShoes)
-    .post(addBrandShoe)
+    .post(passport.authenticate('jwt', { session: false }), addBrandShoe)
 
 
 

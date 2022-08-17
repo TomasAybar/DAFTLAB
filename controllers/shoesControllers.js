@@ -44,33 +44,46 @@ const shoesControllers = {
     addShoe: async (req, res) => {
         const { name, brand, colorway, price, image, description, stock, type } = req.body.data
 
+        console.log('USER', req.user.role)
+
         let newShoe;
         let error = null;
 
-        try {
-            newShoe = await new ShoesModel({
-                name,
-                brand,
-                colorway,
-                price,
-                image,
-                description,
-                stock,
-                type
-            }).save()
+        if (req.user.role === 'admin') {
+            try {
+                newShoe = await new ShoesModel({
+                    name,
+                    brand,
+                    colorway,
+                    price,
+                    image,
+                    description,
+                    stock,
+                    type
+                }).save()
 
-            // res.json({ success: true, response: { newShoe }, message: 'Product added' })
+                // res.json({ success: true, response: { newShoe }, message: 'Product added' })
 
-        } catch (err) {
-            error = err;
+            } catch (err) {
+                error = err;
+            }
+
+            res.json({
+                response: error ? 'ERROR' : newShoe,
+                success: error ? false : true,
+                error: error,
+                message: 'Product added'
+            })
         }
 
-        res.json({
-            response: error ? 'ERROR' : newShoe,
-            success: error ? false : true,
-            error: error,
-            message: 'Product added'
-        })
+        else {
+            res.json({
+                success: false,
+                error: error,
+                message: 'Unauthorized'
+            })
+        }
+
     },
 
     modifyShoe: async (req, res) => {
@@ -80,17 +93,29 @@ const shoesControllers = {
         let shoeDB;
         let error = null;
 
-        try {
-            shoeDB = await ShoesModel.findOneAndUpdate({ _id: id }, shoe, { new: true })
-        } catch (err) {
-            error = err;
+        if (req.user.role === 'admin') {
+            try {
+                shoeDB = await ShoesModel.findOneAndUpdate({ _id: id }, shoe, { new: true })
+            } catch (err) {
+                error = err;
+            }
+
+            res.json({
+                response: error ? 'ERROR' : shoeDB,
+                success: error ? false : true,
+                error: error
+            })
         }
 
-        res.json({
-            response: error ? 'ERROR' : shoeDB,
-            success: error ? false : true,
-            error: error
-        })
+        else {
+            res.json({
+                success: false,
+                error: error,
+                message: 'Unauthorized'
+            })
+        }
+
+
     },
 
     removeShoe: async (req, res) => {
@@ -98,19 +123,30 @@ const shoesControllers = {
         let shoe;
         let error = null;
 
-        try {
-            shoe = await ShoesModel.findOneAndDelete({ _id: id })
-            // res.json({ success: true, response: { shoe }, message: 'remove product' })
-        } catch (err) {
-            error = err;
+        if (req.user.role === 'admin') {
+            try {
+                shoe = await ShoesModel.findOneAndDelete({ _id: id })
+                // res.json({ success: true, response: { shoe }, message: 'remove product' })
+            } catch (err) {
+                error = err;
+            }
+
+            res.json({
+                response: error ? 'ERROR' : shoe,
+                success: error ? false : true,
+                error: error,
+                message: 'remove product'
+            })
         }
 
-        res.json({
-            response: error ? 'ERROR' : shoe,
-            success: error ? false : true,
-            error: error,
-            message: 'remove product'
-        })
+        else {
+            res.json({
+                success: false,
+                error: error,
+                message: 'Unauthorized'
+            })
+        }
+
     },
 
     getShoesByType: async (req, res) => {
@@ -145,7 +181,7 @@ const shoesControllers = {
         })
     },
 
-    
+
 
 }
 

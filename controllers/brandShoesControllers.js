@@ -18,17 +18,29 @@ const brandShoesControllers = {
         const {name, description} = req.body.data
         let brandShoe
         let error = null
-        try{
-            brandShoe = await new brandShoes ({
-                name:name,
-                description: description
-            }).save()
-        }catch(err){error = err}
-        res.json({
-            response: error ? 'ERROR' : brandShoe,
-            succes: error ? false : true,
-            error : error
-        })
+
+        if (req.user.role === 'admin') {
+            try {
+                brandShoe = await new brandShoes({
+                    name: name,
+                    description: description
+                }).save()
+            } catch (err) { error = err }
+            res.json({
+                response: error ? 'ERROR' : brandShoe,
+                succes: error ? false : true,
+                error: error
+            })
+        }
+
+        else {
+            res.json({
+                success: false,
+                error: error,
+                message: 'Unauthorized'
+            })
+        }
+        
     }
 
 }
