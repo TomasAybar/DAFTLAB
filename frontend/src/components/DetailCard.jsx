@@ -25,12 +25,8 @@ const Item = styled(Paper)(({ theme }) => ({
 
 
 const DetailCard = ({ shoes }) => {
-  // const dispatch = useDispatch();
 
   const dispatch = useDispatch();
-
-  // console.log("👠 ~ file: DetailCard.jsx ~ line 4 ~ DetailCard ~ shoes", shoes)
-
 
   const addCarrito = ({ shoes }) => {
     const product = {
@@ -43,8 +39,6 @@ const DetailCard = ({ shoes }) => {
 
     dispatch(shopActions.addToShop(product))
 
-    // localStorage.setItem('carrito', JSON.stringify() )
-    // console.log('alerta agregaste un producto')
     toast.success('Product successfully added')
   }
 
@@ -105,7 +99,6 @@ const DetailCard = ({ shoes }) => {
         </div>)
     }
 
-    //console.log("holaaaas")
   }
 
 
@@ -124,7 +117,7 @@ const DetailCard = ({ shoes }) => {
             <Box sx={{ flexGrow: 1 }}>
               <Grid container spacing={2}>
                 <Grid item xs={12}>
-                  <Item> <img
+                  <Item className='flex items-center justify-center'><img
                     src={shoes.image[0]}
                     alt='producto'
                   /></Item>
@@ -148,8 +141,8 @@ const DetailCard = ({ shoes }) => {
                 </Grid>
 
                 <Grid item xs={12}>
-                  <Item><img
-                    src={shoes.image[0]}
+                  <Item className='flex items-center justify-center'><img
+                    src={shoes.image[3]}
                     alt='producto'
                   /></Item>
                 </Grid>
@@ -167,13 +160,13 @@ const DetailCard = ({ shoes }) => {
             {/* Nombre precio y talle */}
             <div className='boxFixed'>
               <div className=' text-base lg:text-lg text-center'>
-              <div className='hidden md:block'>
-                {logoShoes()}
-              </div>
-                
+                <div className='hidden md:block'>
+                  {logoShoes()}
+                </div>
+
 
                 <h3 className='mb-2 text-2xl font-bold text-center h2Name'>{shoes.name}</h3>
-                <Stack className='mb-2' spacing={1}>
+                <Stack className='mb-2 flex items-center justify-center' spacing={1}>
                   <Rating name="size-large" defaultValue={2} size="large" />
                 </Stack>
                 <p className='mb-4 text-2xl font-bold'>u$s {shoes.price}</p>
@@ -208,21 +201,14 @@ const DetailCard = ({ shoes }) => {
 
 
                 </div>
-
-
               </div>
             </div>
-
           </div>
-
         </div>
-
-
       }
 
     </>
   )
-
 }
 
 export default DetailCard;

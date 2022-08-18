@@ -1,14 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&family=Sriracha&display=swap');
 
-/* #container {
-    
-    margin: 1rem;
-    background: #dfdfdf;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 10px;
-} */
 * {
   margin: 0;
   padding: 0;
@@ -35,15 +26,6 @@ header {
   border-radius: 100%;
   margin-right: 10px;
 }
-
-/* #shoe {
-    width: 400px;
-    height: 200px;
-    object-fit: cover;
-    background-position: center;
-    background-size: cover;
-    background-repeat: ;
-} */
 
 #description {
   padding: 10px;
@@ -196,6 +178,7 @@ h2 {
   text-shadow: 0 1px 0 rgb(255, 255, 255), 0 -1px 2px rgb(0 0 0 / 30%), 0 -2px 2px rgb(0 0 0 / 20%), 0 0 3px rgb(0 0 0 / 10%);
 
 }
+
 /*carritoTomy*/
 .btn-addCartShop {
   color: #fff;
@@ -211,6 +194,7 @@ h2 {
   color: #000;
   background-color: #fff;
 }
+
 /**/
 
 .card h2 {
@@ -264,6 +248,7 @@ h2 {
   transform: scale(0.9) translateX(10%) translateY(20%) rotateZ(-30deg);
   padding-top: 0px;
 }
+
 /* .img-wrapper img:hover {
   padding-top: 0;
 } */
@@ -389,8 +374,8 @@ h2 {
 .boxDetailsFixed {
   display: flex;
   background-color: #cccccc26;
-  /* align-items: center;
-  justify-content: center; */
+  /* align-items: center; */
+  justify-content: flex-start;
 
 }
 
@@ -532,7 +517,8 @@ h2 {
   transition-duration: 400ms;
   transition-property: color;
 }
-.logoDetail{
+
+.logoDetail {
   /* border: 2px solid red; */
   height: 10rem;
   display: flex;
@@ -540,82 +526,106 @@ h2 {
   justify-content: center;
   margin-bottom: 1rem;
 }
-.logosDetailImg{
+
+.logosDetailImg {
   height: 10rem;
 }
+
 .css-jue3ft-MuiRating-root {
   justify-content: center;
 }
-.metodosPago p{
+
+.metodosPago p {
   color: green;
 }
-.frontName{
+
+.frontName {
   position: absolute;
   bottom: 70px;
 }
-@media (width < 570px){
-  .btn{
+
+@media (width < 570px) {
+  .btn {
     height: 7rem;
     width: 11rem;
   }
-    .btn1{
-      height: 5rem;
-      width: 8rem;
-    }
-    .ulSuperF .btn1{
-      margin:0.5rem!important;
-    } 
-    .btnSport p, .btnFancy p, .btnUrban p, .btn1 p {
-      font-size: 16px!important;
-    }
-    .Balenciaga p {
-      font-size: 11px!important;
-    }
-    .containerCarsFinal .wrapper {
-      width: 280px;
-      height: 220px;
-      margin: 0!important;
-    }
-    .containerCarsFinal .wrapper .card {
-      width: 301px;
-      height: 232px;
-    }
-    .containerCarsFinal .wrapper .card>div {
-      width: 270px;
-      height: 201px;
-      border: 1px solid whitesmoke;
-    }
-    .containerCarsFinal .wrapper .img-wrapper .imgCardsf{
-      height:5rem;
-    }
-    .resulF{
-      margin: 0!important;
-    }
-    .containerCarsFinal .wrapper .img-wrapper{
-      top: 72px!important;
-    }
-    .wrapper{
-      height: 338px;
-      width: 243px;
-      margin: 0!important;
-    }
-    .card>div{
-      height: 332px;
-      width: 241px;
-      border: 1px solid whitesmoke;
-    }
-    .imgCardShop{
-      height: 8rem;
-    }
-    .wrapper .card h1{
-    font-size: 34px;
-    transform: translateX(-14px) translateY(-21px);
-    }
-    .bodyShop{
-      padding-top: 14px;
-    }
-    .logosDetailImg {
-      height: 8rem;
+
+  .btn1 {
+    height: 5rem;
+    width: 8rem;
   }
 
+  .ulSuperF .btn1 {
+    margin: 0.5rem !important;
   }
+
+  .btnSport p,
+  .btnFancy p,
+  .btnUrban p,
+  .btn1 p {
+    font-size: 16px !important;
+  }
+
+  .Balenciaga p {
+    font-size: 11px !important;
+  }
+
+  .containerCarsFinal .wrapper {
+    width: 280px;
+    height: 220px;
+    margin: 0 !important;
+  }
+
+  .containerCarsFinal .wrapper .card {
+    width: 301px;
+    height: 232px;
+  }
+
+  .containerCarsFinal .wrapper .card>div {
+    width: 270px;
+    height: 201px;
+    border: 1px solid whitesmoke;
+  }
+
+  .containerCarsFinal .wrapper .img-wrapper .imgCardsf {
+    height: 5rem;
+  }
+
+  .resulF {
+    margin: 0 !important;
+  }
+
+  .containerCarsFinal .wrapper .img-wrapper {
+    top: 72px !important;
+  }
+
+  .wrapper {
+    height: 338px;
+    width: 243px;
+    margin: 0 !important;
+  }
+
+  .card>div {
+    height: 332px;
+    width: 241px;
+    border: 1px solid whitesmoke;
+  }
+
+  .imgCardShop {
+    height: 8rem;
+  }
+
+  .wrapper .card h1 {
+    font-size: 34px;
+    transform: translateX(-14px) translateY(-21px);
+  }
+
+  .bodyShop {
+    padding-top: 14px;
+  }
+
+  .logosDetailImg {
+    height: 8rem;
+  }
+
+}

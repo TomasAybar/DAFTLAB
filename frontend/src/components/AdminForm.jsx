@@ -2,10 +2,8 @@ import '../../src/styles/style.css'
 import { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import toast from 'react-hot-toast';
-
 import adminActions from "../redux/actions/adminActions";
 import shoesActions from "../redux/actions/shoesActions";
-// import { color } from "@mui/system";
 
 export default function AdminForm() {
     const [shoes, setShoes] = useState([]);
@@ -13,9 +11,9 @@ export default function AdminForm() {
     const dispatch = useDispatch();
 
     useEffect(() => {
-        // getShoes()
         dispatch(shoesActions.getShoes())
             .then(res => setShoes(res.data.response))
+
         // eslint-disable-next-line
     }, [reload])
 
@@ -39,9 +37,9 @@ export default function AdminForm() {
             type: e.target[10].value,
         };
 
-        const res = await dispatch(adminActions.addShoe(data))
-        // console.log(res.data.message)
-        toast.success(`${res.data.message}`)
+        const token = localStorage.getItem('token');
+        const res = await dispatch(adminActions.addShoe(data, token));
+        toast.success(`${res.data.message}`);
 
         e.target[0].value = "";
         e.target[1].value = "";
@@ -62,16 +60,16 @@ export default function AdminForm() {
     const handleSubmitDelete = async (e) => {
         e.preventDefault();
 
-        const res = await dispatch(adminActions.removeShoe(e.target[0].value))
-        // dispatch(adminActions.removeShoe(e.target[0].value))
-        toast.success(`${res.data.message}`)
-        // console.log(res.data.message)
+        const token = localStorage.getItem('token');
+
+        const res = await dispatch(adminActions.removeShoe(e.target[0].value, token));
+        toast.success(`${res.data.message}`);
         e.target[0].value = "";
 
         setReload(!reload);
     };
 
-    const colors= ["Select Colorway","black", "grey", "brown", "white", "green", "orange", "cream", "blue", "red", "purple","multi"]
+    const colors = ["Select Colorway", "black", "grey", "brown", "white", "green", "orange", "cream", "blue", "red", "purple", "multi"]
     return (
         <div className="adminFormCtn">
             <div className="backColor">
@@ -106,7 +104,7 @@ export default function AdminForm() {
                             </div>
                             <div className="input-box-add">
                                 <select className="input-admin">
-                                    {colors?.map((col,index)=>(
+                                    {colors?.map((col, index) => (
                                         <option key={index}>{col}</option>
                                     ))}
                                 </select>

@@ -1,13 +1,11 @@
 const Router = require('express').Router();
 const passport = require('../config/passport')
-
 const userValidator = require('../config/validator') //Requiero validador
-const shoesControllers = require('../controllers/shoesControllers');
-
-const { getShoes, getOneShoe, addShoe, modifyShoe, removeShoe, getShoesByType, getShoesByBrand } = shoesControllers;
 
 
 // SHOES
+const shoesControllers = require('../controllers/shoesControllers');
+const { getShoes, getOneShoe, addShoe, modifyShoe, removeShoe, getShoesByType, getShoesByBrand } = shoesControllers;
 
 Router.route('/shoes')
     .get(getShoes)
@@ -26,7 +24,6 @@ Router.route('/shoesByBrand/:id')
 
 
 // USERS
-
 const userControllers = require('../controllers/userControllers')
 const { signUpUsers, loginUser, verifyEmail, verifyToken, logOut, paypalEmail } = userControllers
 
@@ -51,10 +48,9 @@ Router.route('/logintoken')
 Router.route('/email')
     .post(paypalEmail)
 
+
 //TYPE SHOES
-
 const shoestypeControllers = require('../controllers/shoestypeControllers');
-
 const { getTypeShoes, getOnetypeShoes, addTypeShoe, modifyTypeShoe, removeTypeShoe } = shoestypeControllers;
 
 Router.route('/shoesType')
@@ -66,17 +62,14 @@ Router.route('/shoesType/:id')
     .put(passport.authenticate('jwt', { session: false }), modifyTypeShoe)
     .get(getOnetypeShoes)
 
+
 //BRAND SHOES
-
 const brandShoesControllers = require('../controllers/brandShoesControllers');
-
 const { getBrandShoes, addBrandShoe } = brandShoesControllers;
 
 Router.route('/brandShoes')
     .get(getBrandShoes)
     .post(passport.authenticate('jwt', { session: false }), addBrandShoe)
-
-
 
 
 module.exports = Router // lo llamo en server.js

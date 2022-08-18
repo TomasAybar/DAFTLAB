@@ -1,27 +1,33 @@
 import axios from 'axios';
 
-
 const adminActions = {
-  
 
-    addShoe: (data) => {
-
-        // console.log(data);
+    addShoe: (data, token) => {
 
         return async (dispatch, getState) => {
 
-            const res = await axios.post(`https://daftlab-back.herokuapp.com/api/shoes`, { data })
+            const res = await axios.post(`https://daftlab-back.herokuapp.com/api/shoes`, { data },
+                {
+                    headers: {
+                        'Authorization': 'Bearer ' + token
+                    }
+                })
 
             return res;
         }
 
     },
 
-    removeShoe: (idShoe) => {
+    removeShoe: (idShoe, token) => {
 
         return async (dispatch, getState) => {
 
-            const res = await axios.delete(`https://daftlab-back.herokuapp.com/api/shoes/${idShoe}`)
+            const res = await axios.delete(`https://daftlab-back.herokuapp.com/api/shoes/${idShoe}`,
+                {
+                    headers: {
+                        'Authorization': 'Bearer ' + token
+                    }
+                })
 
             return res;
         }
@@ -29,4 +35,4 @@ const adminActions = {
 
 }
 
-export default adminActions
+export default adminActions;
